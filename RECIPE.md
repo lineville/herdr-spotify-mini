@@ -8,7 +8,7 @@ A tiny Spotify player for the Herdr app. In a thin layout block, such as a statu
 
 - **Bar item**, made for a 28px block about 440px wide. Its background is `chrome`, with a 1px `border` line on top and on the right. From left to right:
   - Five 22px round buttons, shown only while a track is loaded: −15s and +15s are a circular arrow with `15` inside at 17px; previous and next are 11px; play/pause is 12px. Each has a `hover` background.
-  - A 22px-high clickable area (radius 4, `hover` background) holding a 13px note icon (`accent` while playing, else `dim`) and `<track>  ·  <artist>` in `foreground` 11.8, truncated. Without a track it reads `Spotify isn't running`, `Nothing playing` or `Can't reach Spotify` in `dim`.
+  - A 22px-high clickable area (radius 4, `hover` background) holding a 13px Spotify logo (`accent` while playing, else `dim`) and `<track>  ·  <artist>` in `foreground` 11.8, truncated. Without a track it reads `Spotify isn't running`, `Nothing playing` or `Can't reach Spotify` in `dim`.
 - **Popup**, 340×180, `popover` background, 14px by 12px padding, 8px gaps:
   - 56px cover art (radius 6), or a `raised` square with a note icon. Beside it, the track in semibold 13 `foreground` and the artist (or the album, for podcasts and audiobooks) in 12 `muted`. A 22px ✕ in `dim` sits at the top right.
   - Elapsed and total time in 10 `dim` around a 4px progress bar: `raised` track, `accent` fill.
@@ -36,7 +36,7 @@ A tiny Spotify player for the Herdr app. In a thin layout block, such as a statu
   - It runs `playpause`, `previous track`, `next track` and `activate`, and sets `shuffling`, `repeating`, `sound volume` and `player position`.
   - `sh` with `curl` saves cover art to `cache/spotify-mini/<id>.jpg` under the app folder.
 - The bar opens the popup with `openOverlay({ mod: "spotify-mini", kind: "popup", width: 340, height: 180, at })`. `at` comes from the bounds that the bar's `on_mouse_down` reports.
-- Icons, all tinted SVGs: `note`, `play`, `pause`, `prev`, `next`, `back15`, `fwd15`, `close`, `shuffle`, `repeat`, `volume`, `mute`, `link`, `check`, `open`. `back15` and `fwd15` draw the `15` as strokes, not text. The last seven follow Lucide.
+- Icons, all tinted SVGs: `spotify`, `note`, `play`, `pause`, `prev`, `next`, `back15`, `fwd15`, `close`, `shuffle`, `repeat`, `volume`, `mute`, `link`, `check`, `open`. `back15` and `fwd15` draw the `15` as strokes, not text. The last seven follow Lucide. `spotify` is the Spotify mark from Simple Icons.
 - Props `{ "demo": true }` show a sample track ("Midnight Static" by "The Long Orbit") and never call Spotify. Add `"view": "preview"` to draw the popup above the bar, as in `preview.png`.
 
 ## Use it in a layout

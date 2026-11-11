@@ -212,7 +212,7 @@ export default class SpotifyMini extends View {
           .cursor_pointer()
           .hover((s) => s.bg(t.hover))
           .on_click(() => this.togglePopup())
-          .child(div().flex_none().text_color(playing ? t.accent : t.dim).child(svg(`${DIR}/note.svg`).size(13)))
+          .child(div().flex_none().text_color(playing ? t.accent : t.dim).child(svg(`${DIR}/spotify.svg`).size(13)))
           .child(div().flex_1().min_w(0).truncate().text_color(live ? t.foreground : t.dim).child(text)));
   }
 
